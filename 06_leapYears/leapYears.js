@@ -3,7 +3,8 @@ const leapYears = function(year) {
         Century years (e.g. 1700) are not leap years
         unless they are divisible by 400 (e.g. 1600)
     */
-    if (year.toString().endsWith('00') && year % 400 === 0 || !year.toString().endsWith('00') && year % 4 === 0) {
+   if (year % 400 === 0 || 
+    year % 100 !== 0 && year % 4 === 0) {
         return true
     } else {
         return false;
