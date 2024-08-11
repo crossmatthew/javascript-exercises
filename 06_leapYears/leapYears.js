@@ -1,9 +1,6 @@
 const leapYears = function(year) {
-    if (year.toString().endsWith('00') && year % 100 === 0 && year % 400 === 0) {
+    if (year.toString().endsWith('00') && year % 100 === 0 && year % 400 === 0 || !year.toString().endsWith('00') && year % 4 === 0) {
         return true
-    }
-    if (!year.toString().endsWith('00') && year % 4 === 0) {
-        return true;
     } else {
         return false;
     };
