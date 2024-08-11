@@ -1,10 +1,7 @@
 const sumAll = function(firstNumber, secondNumber) {
     let sumTotal = 0;
-    if (
-        typeof firstNumber !== 'number' || 
-        typeof secondNumber !== 'number' || 
-        firstNumber % 1 !== 0 ||
-        secondNumber % 1 !== 0 ||
+    if (!Number.isInteger(firstNumber) ||
+        !Number.isInteger(secondNumber) ||
         firstNumber < 0 ||
         secondNumber < 0) {
             return 'ERROR'
